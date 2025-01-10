@@ -1,5 +1,17 @@
 ---
+import '../styles/global.css';
 
+const pageTitle = "About Me";
+
+const identity = {
+	firstName: "Ceora",
+	ocupation: "Developer Advocate",
+	hobbies: ["painting", "anime"]
+};
+
+const skills = ["javascript", "next.js", "react"];
+
+const skillColor = "navy";
 ---
 
 <html lang="en">
@@ -8,13 +20,27 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>{pageTitle}</title>
+		<style define:vars={{skillColor}}>
+			h1 {
+				color: purple;
+				font-size: 4rem;
+			}
+
+			.skills {
+				color: var(--skillColor);
+			}
+		</style>
 	</head>
 	<body>
     <a href="/">Home</a>
     <a href="/about/">About</a>
 		<a href="/blog">Blog</a>
-		<h1>About Me</h1>
-      <p> hi there :)</p>
+		<h1>{pageTitle}</h1>
+      <p> hi there :) my name is {identity.firstName}. </p>
+			<p>my skills</p>
+			<ul>
+				{skills.length === 3 ? skills.map((skill) => <li class="skills">{skill}</li>) : <p> more to be added soon</p>}
+			</ul>
 	</body>
 </html>
