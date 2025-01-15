@@ -1,8 +1,5 @@
 ---
-import '../styles/global.css';
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "About Me";
 
 const identity = {
@@ -15,33 +12,10 @@ const skills = ["javascript", "next.js", "react"];
 
 const skillColor = "navy";
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-		<style define:vars={{skillColor}}>
-			h1 {
-				color: purple;
-				font-size: 4rem;
-			}
-
-			.skills {
-				color: var(--skillColor);
-			}
-		</style>
-	</head>
-	<body>
-    <Navigation />
-		<h1>{pageTitle}</h1>
-      <p> hi there :) my name is {identity.firstName}. </p>
-			<p>my skills</p>
-			<ul>
-				{skills.length === 3 ? skills.map((skill) => <li class="skills">{skill}</li>) : <p> more to be added soon</p>}
-			</ul>
-		<Footer />
-	</body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+	<p> hi there :) my name is {identity.firstName}. </p>
+	<p>my skills</p>
+	<ul>
+		{skills.length === 3 ? skills.map((skill) => <li class="skills">{skill}</li>) : <p> more to be added soon</p>}
+	</ul>
+</BaseLayout>
