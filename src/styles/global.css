@@ -22,7 +22,6 @@ body {
 }
 
 h2 {
-  text-transform: lowercase;
   font-size: 2rem;
 }
 
@@ -130,3 +129,6 @@ img {
   width: 200px;
 }
 
+.footer {
+  background-color: black;
+}
