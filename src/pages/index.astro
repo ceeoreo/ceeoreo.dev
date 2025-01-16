@@ -1,18 +1,31 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const pageTitle = 'ceeoreo.dev'; 
 const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 const allPostsNum = allPosts.length;
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-	<h2>Welcome to my site!</h2>
-	<p>Hello! My name is Ceora and I’m a developer advocate 
-	and code hobbyist. I'm currently working at Auth0 by Okta. </p>
-	<h2>Latest Blog Posts</h2>
-	<p>Here's are my latest blog posts</p>
-	<ul>
-		<li><a href={allPosts[allPostsNum - 1].url}>{allPosts[allPostsNum - 1].frontmatter.title}</a></li>
-	</ul>
+<BaseLayout>
+	<div class='about-section'>
+		<div class='section about'>
+			<h2>Welcome to my site!</h2>
+			<p>Hello! My name is Ceora and I’m a developer advocate 
+			and code hobbyist. I'm currently working at Auth0 by Okta. </p>
+			<div class='socials'>
+			
+			</div>
+		</div>
+		<div class='section'>
+			<img src='/ceorapfp.jpg'>
+		</div>
+	</div>
+	<div class='section'>
+		<h2>Latest Blog Posts</h2>
+		<p>Here's are my latest blog posts</p>
+		<ul>
+			<li><a href={allPosts[allPostsNum - 1].url}>{allPosts[allPostsNum - 1].frontmatter.title}</a></li>
+		</ul>
+	</div>
+	<div>
+	</div>
 </BaseLayout>
