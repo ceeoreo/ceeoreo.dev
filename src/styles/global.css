@@ -34,9 +34,12 @@ header {
   align-items: baseline;
 }
 
+header a {
+  text-decoration: none;
+}
+
 a {
   color: black;
-  text-decoration: none;
 }
 /* nav styles */
 .hamburger {
@@ -107,18 +110,22 @@ a {
   .hamburger {
     display: none;
   }
-  .about-section {
+
+  .about-section,
+  .project-section {
     display: flex;
   }
   
-  .about {
+  .about,
+  .project {
     margin-right: 20px;
   }
+  
   
 }
 
 .section {
-  border: 1rem solid black;
+  border: 10px solid black;
   padding: 25px;
   margin-bottom: 40px;
 }

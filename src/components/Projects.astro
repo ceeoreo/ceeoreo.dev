@@ -1,0 +1,9 @@
+---
+const { projectName } = Astro.props;
+const projectImage = '/' + projectName + '.jpg';
+---
+
+<div class='section project'>
+  <h2>{projectName}</h2>
+  <img src={projectImage}>
+</div>

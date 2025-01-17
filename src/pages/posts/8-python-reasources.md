@@ -38,7 +38,7 @@ This is another book that is widely known in the Python community. I haven't rea
 
 ## **Videos**
 
-### 3. [Freecodecamp- Learn Python by Building 5 Games ] (https://www.youtube.com/watch?v=XGf2GcyHPhc&t=117s)0️⃣
+### 3. [Freecodecamp- Learn Python by Building 5 Games ](https://www.youtube.com/watch?v=XGf2GcyHPhc&t=117s)0️⃣
 
 I have yet to watch this video since it's more than 6 hours long which doesn't go over well in my brain. But the reason why I'm listing it here is because it's project-based.
 
