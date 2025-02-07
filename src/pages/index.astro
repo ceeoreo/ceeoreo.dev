@@ -11,18 +11,15 @@ const allPostsNum = allPosts.length;
 			<h2>Welcome to my site!</h2>
 			<p>Hello! My name is Ceora and I’m a developer advocate 
 			and code hobbyist. I'm currently working at Auth0 by Okta. </p>
-			<div class='socials'>
-			
-			</div>
 		</div>
 		<div class='section'>
-			<img src='/ceorapfp.jpg'>
+			<img src='/pic.jpg' class='pfp'>
 		</div>
 	</div>
 	<div class='section'>
 		<h2>Latest Blog Posts</h2>
 		<p>Here's are my latest blog posts</p>
-		<ul>
+		<ul class='hp-bl'>
 			<li><a href={allPosts[allPostsNum - 1].url}>{allPosts[allPostsNum - 1].frontmatter.title}</a></li>
 			<li><a href={allPosts[allPostsNum - 2].url}>{allPosts[allPostsNum - 2].frontmatter.title}</a></li>
 			<li><a href={allPosts[allPostsNum - 3].url}>{allPosts[allPostsNum - 3].frontmatter.title}</a></li>

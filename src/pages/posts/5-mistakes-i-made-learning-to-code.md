@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '5 Mistakes I Made My First Year Learning to Code'
 pubDate: 2020-03-23
-description: 
+description: 'A run down of the mistakes I made in my first attempt learning to code'
 author: 'Ceora'
 image: 
   url:

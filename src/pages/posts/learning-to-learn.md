@@ -1,8 +1,8 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: 'Learning to Learn- Get the Most Out of Learning with These Resources'
+title: 'Resources for Learning to Learn'
 pubDate: 2020-05-28
-description: 
+description: 'Sharing resources that taught me the art of learning'
 author: 'Ceora'
 image: 
   url:

@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: '8 Resources You Can Use to Learn Python'
 pubDate: 2020-05-15
-description: 
+description: 'A list of Python resources that I found helpful'
 author: 'Ceora'
 image: 
   url:

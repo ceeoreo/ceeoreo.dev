@@ -46,6 +46,10 @@ a {
   color: black;
 }
 /* nav styles */
+.title {
+  display: none;
+}
+
 .hamburger {
   padding-right: 20px;
   cursor: pointer;
@@ -105,6 +109,9 @@ a {
     width: auto;
     background: none;
   }
+  .title {
+    display: inline-block;
+  }
 
   .nav-links a {
     display: inline-block;
@@ -125,15 +132,42 @@ a {
 }
 
 .section {
-  border: 1rem solid black;
+  /* border: 5px solid black;
+  border-radius: 10px; */
   padding: 25px;
   margin-bottom: 40px;
+}
+
+.about-section {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
 }
 
 img {
   object-fit: contain;
   height: 200px;
   width: 200px;
+}
+
+ul {
+  line-height: 50px;
+}
+
+.blogpage-list {
+  list-style-type: none;
+}
+
+.blogpage-list a {
+  font-size: 1.5rem;
+}
+
+.hp-bl {
+  list-style-type: none;
+}
+
+.pfp {
+  border-radius: 50%;
 }
 
 .footer {

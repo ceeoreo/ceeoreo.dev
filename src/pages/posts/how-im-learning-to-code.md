@@ -2,7 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "How I'm Learning to Code and How You Can Too"
 pubDate: 2020-04-14
-description: 
+description: 'Holding myself accountable by sharing exactly how I plan to learn to code'
 author: 'Ceora'
 image: 
   url:
