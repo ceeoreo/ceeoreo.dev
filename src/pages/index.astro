@@ -24,6 +24,8 @@ const allPostsNum = allPosts.length;
 		<p>Here's are my latest blog posts</p>
 		<ul>
 			<li><a href={allPosts[allPostsNum - 1].url}>{allPosts[allPostsNum - 1].frontmatter.title}</a></li>
+			<li><a href={allPosts[allPostsNum - 2].url}>{allPosts[allPostsNum - 2].frontmatter.title}</a></li>
+			<li><a href={allPosts[allPostsNum - 3].url}>{allPosts[allPostsNum - 3].frontmatter.title}</a></li>
 		</ul>
 	</div>
 	<div>
