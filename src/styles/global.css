@@ -15,7 +15,7 @@ body {
   font-family: 'Montserrat', serif;
   min-height: 100%;
   background-image: url('/background.png');
-  background-size: 100%;
+  background-size: cover;
   /* background-image: url('/background2.png');
   background-image: url('/background3.png'); */
 }
