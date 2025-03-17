@@ -1,174 +1,129 @@
-html {
-  /* background: rgb(234,235,240); */
-  /* background: linear-gradient(34deg, rgba(234,235,240,1) 0%, rgba(239,142,82,1) 100%); */
-  font-family: sans-serif;
-  color: black;
-  height: 100%;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "Literata Variable";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 200 900;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/literata:vf@latest/latin-opsz-normal.woff2)
+    format("woff2-variations");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-body {
-  margin: 0 auto;
-  width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
-  line-height: 1.5;
-  font-family: 'Montserrat', serif;
-  min-height: 100%;
-  background-image: url('/background.png');
-  background-size: cover;
-  /* background-image: url('/background2.png');
-  background-image: url('/background3.png'); */
+@font-face {
+  font-family: "press-start-2p";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/press-start-2p@latest/latin-400-normal.woff2)
+      format("woff2"),
+    url(https://cdn.jsdelivr.net/fontsource/fonts/press-start-2p@latest/latin-400-normal.woff)
+      format("woff");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191,
+    U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
-* {
-  box-sizing: border-box;
-
+@theme {
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-display: "press-start-2p", ui-monospace, monospace;
+  --font-serif: "Literata Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-zag-dark: var(--color-neutral-900);
+  --color-zag-light: var(--color-neutral-100);
+  --color-zag-dark-muted: var(--color-neutral-600);
+  --color-zag-light-muted: var(--color-neutral-400);
+  --color-zag-accent-light: var(--color-emerald-400);
+  --color-zag-accent-light-muted: var(--color-emerald-300);
+  --color-zag-accent-dark: var(--color-emerald-600);
+  --color-zag-accent-dark-muted: var(--color-emerald-800);
 }
 
-h2 {
-  font-size: 2rem;
-}
-
-p {
-  font-size: 20px;
-}
-
-header {
-  display: flex;
-  align-items: baseline;
-}
-
-header a {
-  text-decoration: none;
-}
-
-a {
-  color: black;
-}
-/* nav styles */
-.title {
-  display: none;
-}
-
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
-}
-
-.hamburger .line {
-  display: block;
-  width: 30px;
-  height: 3px;
-  margin-bottom: 7px;
-  background-color: black;
-}
-
-.nav-links {
-  width: 100%;
-  top: 5rem;
-  left: 48px;
-  display: none;
-  margin: 0;
-}
-
-.nav-links a {
-  display: block;
-  text-align: center;
-  padding: 10px 0;
-  text-decoration: none;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: lowercase;
-  transition: all 0.35s ease;
-  color: black;
-  font-family: 'Libre Caslon Text';
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  transform: scale(1.1);
-  transition: all 0.35s ease;
-  text-decoration: underline;
-}
-
-.expanded {
-  display: unset;
-}
-
-@media screen and (min-width: 636px) {
-  h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
-    font-family: 'Libre Caslon Text', serif;
+@layer base {
+  :root {
+    --zag-stroke: 2px;
+    --zag-offset: 6px;
+    --zag-transition-duration: 0.15s;
+    --zag-transition-timing-function: ease-in-out;
   }
 
-  .nav-links {
-    margin-left: 5em;
-    display: block;
-    position: static;
-    width: auto;
-    background: none;
-  }
-  .title {
-    display: inline-block;
-  }
-
-  .nav-links a {
-    display: inline-block;
-    padding: 15px 20px;
+  .zag-transition {
+    @media (prefers-reduced-motion: no-preference) {
+      transition:
+        background-color var(--zag-transition-duration) var(--zag-transition-timing-function),
+        color var(--zag-transition-duration) var(--zag-transition-timing-function),
+        fill var(--zag-transition-duration) var(--zag-transition-timing-function),
+        border-color var(--zag-transition-duration) var(--zag-transition-timing-function),
+        transform var(--zag-transition-duration) var(--zag-transition-timing-function);
+    }
   }
 
-  .hamburger {
-    display: none;
+  .zag-bg {
+    background-color: var(--color-zag-light);
+    :where(.dark, .dark *) & {
+      background-color: var(--color-zag-dark);
+    }
+  }
+
+  .-zag-bg {
+    background-color: var(--color-zag-dark);
+    :where(.dark, .dark *) & {
+      background-color: var(--color-zag-light);
+    }
   }
   
-  .about-section {
-    display: flex;
+  .zag-text {
+    color: var(--color-zag-dark);
+    :where(.dark, .dark *) & {
+      color: var(--color-zag-light);
+    }
   }
-  
-  .about {
-    margin-right: 20px;
+
+  .-zag-text {
+    color: var(--color-zag-light);
+    :where(.dark, .dark *) & {
+      color: var(--color-zag-dark);
+    }
   }
-  
-}
 
-.section {
-  padding: 20px;
-}
+  .zag-muted {
+    color: var(--color-zag-dark-muted);
+    :where(.dark, .dark *) & {
+      color: var(--color-zag-light-muted);
+    }
+  }
 
-.about-section img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
+  .zag-fill {
+    fill: var(--color-zag-dark);
+    &:where(.dark, .dark *) {
+      fill: var(--color-zag-light);
+    }
+  }
 
-img {
-  object-fit: contain;
-  height: 200px;
-  width: 200px;
-}
+  .zag-text-muted {
+    color: var(--color-zag-dark-muted);
+    &:where(.dark, .dark *) {
+      color: var(--color-zag-light-muted);
+    }
+  }
 
-ul {
-  line-height: 50px;
-  font-size: 20px;
-}
+  .zag-border-b {
+    border-bottom: var(--zag-stroke) solid;
+    border-color: var(--color-zag-dark);
+    &:where(.dark, .dark *) {
+      border-color: var(--color-zag-light);
+    }
+  }
 
-.blogpage-list {
-  list-style-type: none;
-}
+  .zag-offset {
+    text-underline-offset: var(--zag-offset);
+  }
 
-.blogpage-list a {
-  font-size: 1.5rem;
-}
-
-.hp-bl {
-  list-style-type: none;
-}
-
-.pfp {
-  border-radius: 50%;
-}
-
-.footer {
-  background-color: black;
+  .opsz {
+    font-variation-settings: "opsz" 72;
+  }
 }

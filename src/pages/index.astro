@@ -1,31 +1,51 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-
-const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
-const allPostsNum = allPosts.length;
+import { featuredArticles, featuredProjects } from "../lib/featured";
+import { GLOBAL } from "../lib/variables";
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/home/Hero.astro";
+import Section from "../components/common/Section.astro";
+import FeaturedProjects from "../components/home/FeaturedProjects.astro";
+import FeaturedArticles from "../components/home/FeaturedArticles.astro";
 ---
 
-<BaseLayout>
-	<div class='about-section'>
-		<div class='section'>
-			<img src='/pic.jpg' class='pfp'>
-		</div>
-		<div class='section about'>
-			<h2>Welcome to my site!</h2>
-			<p> Hello! My name is Ceora and I’m a developer advocate 
-			and code hobbyist. I'm based in Philadelphia and I currently work at Auth0 by Okta. This website is the home
-			for all my personal blog content. Feel free to follow me on all my socials listed below :)</p>
-		</div>
-	</div>
-	<div class='section'>
-		<h2>Latest Blog Posts</h2>
-		<p>Here are my latest blog posts</p>
-		<ul class='hp-bl'>
-			<li><a href={allPosts[allPostsNum - 1].url}>{allPosts[allPostsNum - 1].frontmatter.title}</a></li>
-			<li><a href={allPosts[allPostsNum - 2].url}>{allPosts[allPostsNum - 2].frontmatter.title}</a></li>
-			<li><a href={allPosts[allPostsNum - 3].url}>{allPosts[allPostsNum - 3].frontmatter.title}</a></li>
-		</ul>
-	</div>
-	<div>
-	</div>
-</BaseLayout>
+<Layout>
+  <Fragment slot="head">
+    <title>{GLOBAL.username} • {GLOBAL.shortDescription}</title>
+    <meta
+      name="description"
+      content={GLOBAL.longDescription}
+    />
+    <meta
+      property="og:title"
+      content={`${GLOBAL.username} • ${GLOBAL.shortDescription}`}
+    />
+    <meta
+      property="og:description"
+      content={GLOBAL.longDescription}
+    />
+    <meta property="og:image" content={`${GLOBAL.rootUrl}/zaggonaut.png`} /> 
+    <meta property="og:url" content={GLOBAL.rootUrl} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content={`${GLOBAL.username} • ${GLOBAL.shortDescription}`}
+    />
+    <meta
+      name="twitter:description"
+      content={GLOBAL.longDescription}
+    />
+    <meta name="twitter:image" content={`${GLOBAL.rootUrl}/zaggonaut.png`} />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="language" content="English" />
+    <link rel="canonical" href={GLOBAL.rootUrl} />
+  </Fragment>
+  <Section class="my-16">
+    <Hero />
+  </Section>
+  <Section>
+    <FeaturedArticles featuredArticles={featuredArticles} />
+  </Section>
+  <Section>
+    <FeaturedProjects featuredProjects={featuredProjects} />
+  </Section>
+</Layout>
