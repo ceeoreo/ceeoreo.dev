@@ -33,15 +33,22 @@
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --font-display: "press-start-2p", ui-monospace, monospace;
   --font-serif: "Literata Variable", ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-  --color-zag-dark: var(--color-neutral-900);
-  --color-zag-light: var(--color-neutral-100);
-  --color-zag-dark-muted: var(--color-neutral-600);
-  --color-zag-light-muted: var(--color-neutral-400);
-  --color-zag-accent-light: var(--color-emerald-400);
-  --color-zag-accent-light-muted: var(--color-emerald-300);
-  --color-zag-accent-dark: var(--color-emerald-600);
-  --color-zag-accent-dark-muted: var(--color-emerald-800);
+  --color-zag-dark: #1A132F;
+  --color-zag-light: #F7E2E2;
+  --color-zag-dark-muted: #5B7DB1;
+  --color-zag-light-muted: #61A4BC;
+  --color-zag-accent-light: #F7E2E2;
+  --color-zag-accent-light-muted: #61A4BC;
+  --color-zag-accent-dark: #1A132F;
+  --color-zag-accent-dark-muted: #5B7DB1;
 }
+
+/*  
+light : F7E2E2
+mid-l : 61A4BC
+mid-d : 5B7DB1
+dark : 1A132F
+*/
 
 @layer base {
   :root {
