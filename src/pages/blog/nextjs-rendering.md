@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/BlogLayout.astro
-title: Next.js in A Nutshell: Rendering
+title: Next.js in A Nutshell - Rendering
 description: Learn the basics of Next.JS with this series. This post focuses on rendering in Next.js
 tags: ['nextjs', 'coding', 'beginner', 'frontend']
 time: 4

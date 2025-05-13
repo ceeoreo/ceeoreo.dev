@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: How to Maintain Your Skills as a Developer
-description: 
+description: Some tips for maintaining your dev skills
 tags: ['career', 'webdev']
 time: 3
 featured: false

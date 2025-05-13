@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: A Beginners Guide to Project Building
-description: 
+description: Project building can be hard. Here are some tips to make it easier
 tags: ['beginner', 'coding']
 time: 3
 featured: false

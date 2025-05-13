@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: Wait... Serverless Isn't Actually Serverless?
-description: 
+description: Serverless doesn't actually mean serverless
 tags: ['cloud', 'aws', 'beginner']
 time: 4
 featured: true
