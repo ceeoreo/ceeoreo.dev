@@ -5,7 +5,7 @@ description: A collection of 7 resources you can use to learn GraphQL
 tags: ['graphql', 'coding', 'beginner']
 time: 3
 featured: true
-timestamp: 2023-12-05T02:39:03+00:00
+timestamp: 2023-05-17T02:39:03+00:00
 filename: graphql-learning-resources
 ---
 I recently held a Twitter Space where I discussed how I learned GraphQL during my first few months as a developer advocate here at Apollo. I went over the strategies I used which can be really helpful regardless of what language, framework, or tool you’re learning on the job. If you're interested in checking out the recording, I’ll leave a link at the end of this article.
