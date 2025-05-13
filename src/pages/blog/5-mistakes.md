@@ -4,7 +4,7 @@ title: 5 Mistakes I Made My First Year Learning to Code
 description: A run down of the mistakes I made in my first attempt learning to code.
 tags: ['productivity', 'career', 'beginner']
 time: 4
-featured: true
+featured: false
 timestamp: 2020-03-23T02:39:03+00:00
 filename: 5-mistakes
 ---

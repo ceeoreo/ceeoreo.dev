@@ -4,7 +4,7 @@ title: 8 Resources You Can Use to Learn Python
 description: A list of Python resources that I found helpful
 tags: ['python', 'career', 'beginner']
 time: 3
-featured: true
+featured: false
 timestamp: 2020-05-15T02:39:03+00:00
 filename: 8-python-resources
 ---
