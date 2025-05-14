@@ -11,7 +11,7 @@ export const GLOBAL = {
   githubProfile: "https://github.com/ceeoreo",
   twitterProfile: "https://x.com/ceeoreo_",
   linkedinProfile: "https://www.linkedin.com/in/ceora-ford/",
-  
+  blueskyProfile:  "https://bsky.app/profile/ceeoreo.dev",
   // Common text names used throughout the site
   articlesName: "Articles",
   projectsName: "Projects",
