@@ -35,6 +35,9 @@ export const GLOBAL = {
   // Profile image
   profileImage: "ceorapfp.jpg",
 
+  // // Social Card Image
+  // socialCardImage: "social-card.png",
+
   // Menu items
   menu: {
     home: "/",

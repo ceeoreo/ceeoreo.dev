@@ -4,7 +4,7 @@ title: Wait... Serverless Isn't Actually Serverless?
 description: Serverless doesn't actually mean serverless
 tags: ['cloud', 'aws', 'beginner']
 time: 4
-featured: true
+featured: false
 timestamp: 2020-10-30T02:39:03+00:00
 filename: serverless
 ---
