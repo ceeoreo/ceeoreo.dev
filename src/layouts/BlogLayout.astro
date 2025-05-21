@@ -68,6 +68,13 @@ const ogImageUrl = getCldOgImageUrl({
     <meta property="og:title" content={`${frontmatter.title} • ${GLOBAL.username}`} />
     <meta property="og:description" content={shortDescription} />
     <!-- <meta property="og:image" content={`${GLOBAL.rootUrl}/${GLOBAL.profileImage}`} /> -->
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:secure_url" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="twitter:title" content="<Twitter Title>" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content={ogImageUrl} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={`${frontmatter.title} • ${GLOBAL.username}`} />
     <meta name="twitter:description" content={shortDescription} />
