@@ -24,17 +24,39 @@ const headline = frontmatter.title;
 const tagline = 'by Ceora Ford';
 const ogImageUrl = getCldOgImageUrl({
   src: 'social-card',
-  overlays: [{
-    width: 1000,
-    crop: 'fit',
-    text: {
-      color: 'rgb:F7E2E2',
-      fontFamily: 'monospace',
-      fontSize: 48,
-      lineSpacing: 10,
-      text: headline
+  overlays: [
+    {
+      width: 1000,
+      crop: 'fit',
+      text: {
+        color: 'rgb:F7E2E2',
+        fontFamily: 'monospace',
+        fontSize: 48,
+        lineSpacing: 10,
+        text: headline
+        },
+      position: {
+        x: 100,
+        y: 100,
+        gravity: 'north_west'
       }
-    }],
+    },
+    {
+      width: 1000,
+      crop: 'fit',
+      text: {
+        color: '',
+        fontFamily: '',
+        fontSize: 35,
+        text: tagline
+      },
+      position: {
+        x: 180,
+        y: 100,
+        gravity: 'south_west'
+      }
+    }
+  ],
 })
 // Not sure if color codes or custom fonts will work :/
 ---
