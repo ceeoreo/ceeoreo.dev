@@ -12,6 +12,7 @@ import Prose from "../components/Prose.astro";
 import Layout from "./Layout.astro";
 import { getCldOgImageUrl } from "astro-cloudinary/helpers";
 import { ClientRequest } from "http";
+import { fileURLToPath } from "url";
 
 type Props = MarkdownLayoutProps<ArticleFrontmatter>;
 
@@ -19,6 +20,45 @@ const { frontmatter } = Astro.props;
 const shortDescription = getShortDescription(frontmatter.description);
 const articleDate = processArticleDate(frontmatter.timestamp);
 const sourceUrl = generateSourceUrl(frontmatter.filename, "blog");
+const headline = frontmatter.title;
+const tagline = 'by Ceora Ford';
+const ogImageUrl = getCldOgImageUrl({
+  src: 'social-card',
+  overlays: [
+    {
+      width: 1000,
+      crop: 'fit',
+      text: {
+        color: 'rgb:F7E2E2',
+        fontFamily: 'monospace',
+        fontSize: 48,
+        lineSpacing: 10,
+        text: headline
+        },
+      position: {
+        x: 100,
+        y: 100,
+        gravity: 'north_west'
+      }
+    },
+    {
+      width: 1000,
+      crop: 'fit',
+      text: {
+        color: '',
+        fontFamily: '',
+        fontSize: 35,
+        text: tagline
+      },
+      position: {
+        x: 180,
+        y: 100,
+        gravity: 'south_west'
+      }
+    }
+  ],
+})
+// Not sure if color codes or custom fonts will work :/
 ---
 
 <Layout>
