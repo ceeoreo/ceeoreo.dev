@@ -4,7 +4,7 @@ title: The Art of Slowing Down
 description: I'm the kind of person who's always in a rush. In this article, I talk about how learning to slow down has helped me sooo much. 
 tags: ['career']
 time: 4
-featured: true
+featured: false
 timestamp: 2025-05-15T02:39:03+00:00
 filename: slowing-down
 ---
