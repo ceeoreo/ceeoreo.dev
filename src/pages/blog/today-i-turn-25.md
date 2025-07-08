@@ -3,7 +3,7 @@ layout: ../../layouts/BlogLayout.astro
 title: Today I turn 25. This is my story
 description: Today I turn 25 and it feels like it's the right time to share a little more of my story and how I got to where I am today.
 tags: [ 'career', 'personal']
-time: 4
+time: 3
 featured: true
 timestamp: 2025-07-08T02:39:03+00:00
 filename: today-i-turn-25
@@ -53,4 +53,4 @@ In late 2024, I had to do an intensive therapy program to help me navigate the i
 
 And today? Today, I live in a house with my loving partner and my cat, Pecan. Today, my younger sister lives with me too. Today is her first day taking summer classes at our local Community College. Today, I work at Figma doing the things I enjoy most. Today, I haven’t heard from my parents and I likely never will after deciding to leave all that behind. But today, I am 25 and I feel like I have finally reached the top of the hill. I finally have made my way out. And I can only be thankful to every single person who has helped me along the way. Thank you. Thank you. Thank you. 
 
-Of course, there is more to this story. But I think this is a fitting starting point. I’m so grateful to be alive today and to have the platform and ability to share my story with you. Thank you for reading!!
+Of course, there is more to this story. But I think this is a fitting starting point. I’m so grateful to be where I'm at today and to have the platform and ability to share my story with you. Thank you for reading!!
